@@ -1398,12 +1398,12 @@
 // 1- swap the value of Two variables
 // ====================================
 
-let a  =1; 
-let b = 2 ; 
-// dectructring = [array ]
-[a,b] = [b,a] ; 
+// let a  =1; 
+// let b = 2 ; 
+// // dectructring = [array ]
+// [a,b] = [b,a] ; 
 
-console.log(a,b)
+// console.log(a,b)
 
 
 // ====================================
@@ -1412,12 +1412,154 @@ console.log(a,b)
 // 2- Swap Elements in an array 
 // =============================
 
-const colors = ["red" , "green" , "blue" , "white"] ; 
-[colors[0] , colors[3]] = [colors[3] , colors[0]] ; 
+// const colors = ["red" , "green" , "blue" , "white"] ; 
+// [colors[0] , colors[3]] = [colors[3] , colors[0]] ; 
 
-console.log(colors); 
+// console.log(colors); 
 
 // =================================================================
+
+// nested objects => Object inside of Objects Allows you to represent more complex
+// data Structures Child Objects is enclosed by a Parent Object 
+
+//                  Person{Adress{} , ContactInto{}}
+// ShopingCart {Keyboard{ } , board{ } , Monitor{ } }
+// 
+
+
+// const person = {
+//     fullName : "Spongpop" , 
+//     age : 30 , 
+//     isStudent : true , 
+//     hobbies : ["karate" , "cooking"],
+//     address : {
+//         street : "123 conch st." , 
+//         city : "Bikini Bottom" , 
+//         country : "International "
+//     } 
+
+// }
+// console.log(person.fullName) ; 
+// console.log(person.age) ; 
+// console.log(person.isStudent);
+// console.log(person.hobbies[0]);
+// console.log(person.address.street);
+// console.log(person.address.city) ;
+// console.log(person.address.country)
+
+
+// for.... in 
+
+// for (const property in person.address){
+//     console.log(property) ; 
+// }
+
+// class Person{
+   
+//    constructor(name,age,...adress){
+//           this.name=name ;
+//           this.age = age ; 
+//           this.adress = new Address(...adress);
+//    }
+   
+   
+ 
+
+    
+// }
+
+// class Address{
+//     constructor(street , city ,contry){
+//         this.street =street ; 
+//         this.city = city ; 
+//         this.contry = contry ; 
+//     }
+// }
+
+
+// const person1 = new Person ("ss" , 30 , "123m" , "jdjd" , "djd") ; 
+// const person2= new Person ("patrack" , 20 , "23m" , "jdjd" , "djd") ; 
+// const person3= new Person ("squidward" , 10 , "23" , "jdjd" , "djd") ; 
+
+
+// console.log(person1.adress.street);
+
+
+// Array of objects : 
+//-------------------
+
+// const fruits = [{name : "apple" , color:"red"}, 
+//     {name : "orange" , color:"orange" } ,
+// {name : "banana" , color:"Yellow" }, 
+// {name : "Coconut" , color:"white" }, 
+// {name : "pineapple" , color:"green" } , 
+//  ]
+// fruits.push({name:"chch" ,color: "jkfj"})
+
+//  console.log(fruits[1].name)
+
+//  use forEach to desplay
+
+//map => return an array 
+
+// const firstName = fruits.map(element=>element.name);
+// const color = fruits.map(element => element.color) ; 
+
+// console.log(firstName)
+// console.log(color)
+
+// filer => will return new array after checking the condition 
+
+// const yello = fruits.filter(element => element.color === "Yellow") ; 
+// console.log(yello)
+
+// reduce () => return  single value 
+
+// const maxf = fruits.reduce((max , nextFruit) =>  ); 
+
+// Sort() => method used to sort elements of an array in place 
+// sorts elements as strings in lexicographic order ,not alphaberical 
+// lexicographic = (alphabet + numbers + symbols ) as strings 
+
+// let numbers =[1,10,9,23,42,2,2,4]
+
+// // sorting numbers we should do alot of steps because it sort it as a string
+
+// numbers.sort((a,b) => b-a) ; 
+// console.log(numbers) ; 
+
+// const people = [
+//     {name:"SpongBab" , age : 30 , gpa : 3.0},
+//     {name:"Patrick" , age : 32 , gpa : 3.2},
+//     {name:"Squidward" , age : 31 , gpa : 3.1},
+//     {name:"sandy" , age : 30 , gpa : 4}
+// ]
+
+// // sort this array of object with the age of it
+// // for comparing with lexicographic order
+// people.sort((a , b ) => a.name.localeCompare(b.name)) ; 
+
+// console.log(people)
+
+
+// Shuffle an array :- 
+
+// const cards = ['A',2,3,4,5,6,,7,8,9,10];
+
+
+// Here We gonna take about ES6 Modules :- 
+// Am external file that contains resuable code 
+// that can be imported into other javascript files.
+// write resuable code for many difference apps 
+// can contain variables , classes , functions , .... and more
+// introduced as Part of ECAMScrpt 2015 upate 
+
+
+// here we will gona import an moduale
+import {PI , getCircumference , getArea , getVolume} from './mathUtile' ;
+console.log(PI) ;
+
+
 
 
 
